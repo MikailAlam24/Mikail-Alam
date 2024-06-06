@@ -1,0 +1,207 @@
+html {
+    font-family: Tahoma, sans-serif;
+}
+
+body {
+    background-color: antiquewhite;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+td, th {
+    border: 1px solid whitesmoke;
+    text-align: left;
+    padding: 8px;
+  }
+  
+tr:nth-child(even) {
+    background-color: #f27059;
+  }
+
+tr:nth-child(odd) {
+    background-color: #f79d65;
+}
+
+h1 {
+    text-align: center;
+    background-color: #f25c54;
+    padding: 20px;
+}
+
+/* unvisited link */
+a:link {
+    color: red;
+  }
+  
+  /* visited link */
+  a:visited {
+    color: rgb(17, 0, 128);
+  }
+  
+  /* mouse over link */
+  a:hover {
+    color: hotpink;
+  }
+  
+  /* selected link */
+  a:active {
+    color: blue;
+  }
+
+#htx {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    max-width: 100%;
+    height: auto;
+}
+
+#description {
+    background-color: #f27059;
+    padding: 10px;
+}
+
+#funfacts {
+    background-color: #f4845f;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+#funfacts li{
+    padding: 5px;
+}
+
+#tourist {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f79d65;
+}
+
+#tourist li {
+    padding: 10px;
+}
+
+#food {
+    background-color: #f7b267;
+    padding: 20px;
+}
+
+#imagegallery {
+    background-color: #f79d65;
+    height: 75px;
+    margin: 20px;
+    padding: 10px;   
+}
+
+div.gallery {
+    padding: 5px;
+    border: 1px solid #ccc;
+  }
+  
+
+div.gallery:hover {
+    border: 1px solid #777;
+}
+  
+div.gallery img {
+    width: 100%;
+    height: auto;
+  }
+  
+div.desc {
+    padding: 15px;
+    text-align: center;
+  }
+
+* {
+    box-sizing: border-box; 
+  }
+  
+  .responsive {
+    padding: 0 6px;
+    float: left;
+    width: 24.99999%;
+  }
+  
+  @media only screen and (max-width: 700px) {
+    .responsive {
+      width: 49.99999%;
+      margin: 6px 0;
+    }
+  }
+  
+  @media only screen and (max-width: 500px) {
+    .responsive {
+      width: 100%;
+    }
+  }
+  
+  .clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+
+  input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+  }
+  
+  label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+  }
+  
+  input[type=submit] {
+    background-color: #f25c54;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #f7b267;
+  }
+  
+  .container {
+    border-radius: 5px;
+    background-color: #f79d65;
+    padding: 20px;
+  }
+  
+  .col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+  }
+  
+  .col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+  }
+  
+  /* Clear floats after the columns */
+  .row::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .col-25, .col-75, input[type=submit] {
+      width: 100%;
+      margin-top: 0;
+    }
+  }
