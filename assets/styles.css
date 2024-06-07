@@ -234,15 +234,36 @@ div.desc {
 
 /*POST*/
 
-#restaurants .container {
+#restaurants .lcontainer {
+    border-radius: 5px;
+    background-color: #f79d65;
+    padding: 20px;
     position: relative;
     width: 50%;
+    float: left;
+  }
+
+  #restaurants .rcontainer:hover .overlay {
+    opacity: 0.5;
+  }
+
+  #restaurants .rcontainer {
+    border-radius: 5px;
+    background-color: #f79d65;
+    padding: 20px;
+    position: relative;
+    width: 50%;
+    float: right;
+  }
+
+  #restaurants .lcontainer:hover .overlay {
+    opacity: 0.5;
   }
   
   #restaurants  .image {
     display: block;
     width: 100%;
-    height: auto;
+    height: 100%;
   }
   
   #restaurants .overlay {
@@ -255,12 +276,10 @@ div.desc {
     width: 100%;
     opacity: 0;
     transition: .5s ease;
-    background-color: #008CBA;
+    background-color: red;
   }
   
-  #restaurants .container:hover .overlay {
-    opacity: 1;
-  }
+
   
   #restaurants .text {
     color: white;
