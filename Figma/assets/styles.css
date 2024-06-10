@@ -59,14 +59,12 @@ nav ul li a:hover {
     border-bottom: 2px solid #F69046;
 }
 
-
 section {
     background: #fff;
     margin: 20px 0;
     padding: 20px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
-
 
 section.photo {
     display: flex;
@@ -209,6 +207,7 @@ button:hover {
 .project-list {
     display: flex;
     gap: 20px; /* Space between project cards */
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
 }
 
 .project-card {
@@ -218,7 +217,7 @@ button:hover {
     overflow: hidden;
     text-align: center;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    flex: 1;
+    flex: 1 1 30%; /* Flex-grow, flex-shrink, flex-basis */
     text-decoration: none; /* Removes underline from link */
     color: inherit; /* Inherits color from parent element */
     transition: background-color 0.3s, color 0.3s;
@@ -276,11 +275,7 @@ button:hover {
     display: flex;
     align-items: center;
     gap: 20px;
-    flex-wrap: wrap;
-}
-
-.testimonial:nth-child(2) {
-    justify-content: flex-end; /* Align the second testimonial to the right */
+    flex-wrap: nowrap; /* Prevent wrapping inside each testimonial */
 }
 
 .testimonial img {
@@ -294,6 +289,7 @@ button:hover {
 
 .testimonial-content {
     flex: 1; /* Allow content to fill remaining space */
+    max-width: 100%; /* Ensure it fits within the parent container */
     text-align: left;
 }
 
@@ -314,6 +310,15 @@ button:hover {
     font-size: 16px;
     color: #333;
     line-height: 1.5;
+    margin: 0;
+}
+
+.testimonial:nth-child(2) .testimonial-content {
+    text-align: right; /* Align text to the right for the second testimonial */
+}
+
+.testimonial:nth-child(2) img {
+    order: 2; /* Position the image after the content for the second testimonial */
 }
 
 .work-button {
@@ -425,3 +430,61 @@ footer {
     opacity: 0.6;
 }
 
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    section.photo, section.photo .content, section.photo .profile-pic {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .profile-pic {
+        flex-basis: auto;
+        padding-right: 0;
+        max-width: 80%;
+    }
+
+    .profile-pic img {
+        max-width: 100%;
+    }
+
+    .content {
+        padding: 10px;
+    }
+
+    .project-list {
+        flex-direction: column;
+    }
+
+    .project-card {
+        flex: 1 1 100%;
+    }
+
+    .testimonial {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .testimonial-content {
+        text-align: center;
+    }
+
+    .testimonial:nth-child(2) .testimonial-content {
+        text-align: center;
+    }
+
+    footer .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
