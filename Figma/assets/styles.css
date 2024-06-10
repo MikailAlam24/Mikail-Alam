@@ -276,6 +276,7 @@ button:hover {
     display: flex;
     align-items: center;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
 .testimonial:nth-child(2) {
@@ -288,10 +289,12 @@ button:hover {
     border-radius: 50%;
     object-fit: cover;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    flex-shrink: 0;
 }
 
 .testimonial-content {
-    max-width: 500px;
+    flex: 1; /* Allow content to fill remaining space */
+    text-align: left;
 }
 
 .testimonial-content h3 {
