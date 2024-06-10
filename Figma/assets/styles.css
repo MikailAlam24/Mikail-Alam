@@ -127,19 +127,6 @@ button:hover {
     float: left;
 }
 
-/* Footer styling */
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #333;
-    color: white;
-}
-
-
-footer p {
-    opacity: 0.6;
-}
-
 .profile-pic {
     flex-basis: 30%; /* Adjust size of image container */
     text-align: center;
@@ -174,3 +161,264 @@ footer p {
     text-decoration: none;
     border-radius: 5px;
 }
+
+/* Projects Section Styling */
+.projects {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.projects h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.filters {
+    margin-bottom: 20px;
+}
+
+.filters ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 20px; /* Space between filters */
+    border-bottom: 1px solid #ddd;
+}
+
+.filters ul li {
+    display: inline;
+}
+
+.filters ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.3s, color 0.3s;
+}
+
+.filters ul li a:hover, .filters ul li a.active {
+    border-bottom: 2px solid #F69046;
+    color: #F69046;
+}
+
+.project-list {
+    display: flex;
+    gap: 20px; /* Space between project cards */
+}
+
+.project-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    flex: 1;
+    text-decoration: none; /* Removes underline from link */
+    color: inherit; /* Inherits color from parent element */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.project-card:hover {
+    background-color: #F69046; /* Changes background on hover */
+    color: white; /* Changes text color on hover */
+}
+
+.project-card img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd; /* Adds a border to separate image from text */
+}
+
+.project-card h3, .project-card p {
+    margin: 10px;
+    transition: color 0.3s; /* Smooth transition for text color */
+}
+
+.project-card h3 {
+    font-size: 18px;
+    color: #333;
+}
+
+.project-card p {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Testimonials Section Styling */
+.testimonials {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.testimonials h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.testimonial-list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px; /* Space between testimonials */
+}
+
+.testimonial {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.testimonial:nth-child(2) {
+    justify-content: flex-end; /* Align the second testimonial to the right */
+}
+
+.testimonial img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.testimonial-content {
+    max-width: 500px;
+}
+
+.testimonial-content h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.testimonial-content .position {
+    font-size: 14px;
+    color: #aaa;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+.testimonial-content p {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.5;
+}
+
+.work-button {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.work-button button {
+    padding: 10px 20px;
+    background-color: #F69046;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.work-button button:hover {
+    background-color: #ff700a;
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #000; /* Dark background */
+    color: #ccc; /* Light text color */
+    padding: 40px 20px; /* Space around content */
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between; /* Space out columns */
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 200px; /* Minimum width for columns */
+    margin: 10px; /* Space between columns */
+}
+
+.footer-title {
+    font-size: 24px;
+    color: #fff; /* White color for title */
+    margin-bottom: 20px; /* Space below the title */
+}
+
+.footer-column h3 {
+    color: #fff; /* White heading */
+    margin-bottom: 10px; /* Space below heading */
+}
+
+.footer-column p, .footer-column ul {
+    margin: 5px 0; /* Space between paragraphs and lists */
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 5px;
+}
+
+.footer-column ul li a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s; /* Smooth transition for hover */
+}
+
+.footer-column ul li a:hover {
+    color: #f69046; /* Orange color on hover */
+}
+
+.footer-column a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+.footer-column a:hover {
+    color: #f69046;
+}
+
+.social-icons a {
+    margin-right: 10px; /* Space between icons */
+    display: inline-block;
+    transition: transform 0.3s; /* Smooth transition for hover */
+}
+
+.social-icons a:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+.social-icons img {
+    width: 24px; /* Size of social icons */
+    height: auto;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    border-top: 1px solid #333; /* Light border on top */
+    padding-top: 20px;
+}
+
+.footer-bottom p {
+    color: #555; /* Darker color for copyright text */
+    opacity: 0.6;
+}
+
