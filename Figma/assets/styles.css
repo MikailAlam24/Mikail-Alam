@@ -230,19 +230,18 @@ button:hover {
 }
 
 .project-card:hover {
-    background-color: #F69046; /* Changes background on hover */
-    color: white; /* Changes text color on hover */
+    background-color: #F69046;
+    color: white;
 }
 
 .project-card img {
     width: 100%;
     height: auto;
-    border-bottom: 1px solid #ddd; /* Adds a border to separate image from text */
+    border-bottom: 1px solid #ddd;
 }
 
 .project-card h3, .project-card p {
     margin: 10px;
-    transition: color 0.3s; /* Smooth transition for text color */
 }
 
 .project-card h3 {
@@ -499,6 +498,10 @@ footer {
     }
 
     .testimonial-content {
+        text-align: center;
+    }
+
+    .testimonial-additional {
         text-align: center;
     }
 
