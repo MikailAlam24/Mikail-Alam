@@ -35,12 +35,17 @@ header .logo h1 {
     color: #333;
 }
 
+.hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
 /* Navigation items */
 nav ul {
     list-style: none;
     display: flex;
 }
-
 
 nav ul li {
     margin-left: 20px;
@@ -83,6 +88,7 @@ section.photo .profile-pic {
     flex-basis: 40%;
     text-align: center;
 }
+
 /* image styling */
 section.photo img {
     width: 100%;
@@ -313,12 +319,20 @@ button:hover {
     margin: 0;
 }
 
-.testimonial:nth-child(2) .testimonial-content {
+.testimonial:nth-child(even) .testimonial-content {
     text-align: right; /* Align text to the right for the second testimonial */
 }
 
-.testimonial:nth-child(2) img {
+.testimonial:nth-child(even) img {
     order: 2; /* Position the image after the content for the second testimonial */
+}
+
+.testimonial.additional {
+    display: none; /* Hide additional testimonials by default */
+}
+
+.testimonial.additional.visible {
+    display: flex; /* Show additional testimonials when visible */
 }
 
 .work-button {
@@ -343,36 +357,36 @@ button:hover {
 
 /* Footer Styling */
 footer {
-    background-color: #000; /* Dark background */
-    color: #ccc; /* Light text color */
-    padding: 40px 20px; /* Space around content */
+    background-color: #000; 
+    color: #ccc;
+    padding: 40px 20px;
 }
 
 .footer-container {
     display: flex;
-    justify-content: space-between; /* Space out columns */
-    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    justify-content: space-between;
+    flex-wrap: wrap; 
 }
 
 .footer-column {
     flex: 1;
-    min-width: 200px; /* Minimum width for columns */
-    margin: 10px; /* Space between columns */
+    min-width: 200px; 
+    margin: 10px; 
 }
 
 .footer-title {
     font-size: 24px;
-    color: #fff; /* White color for title */
-    margin-bottom: 20px; /* Space below the title */
+    color: #fff; 
+    margin-bottom: 20px; 
 }
 
 .footer-column h3 {
-    color: #fff; /* White heading */
-    margin-bottom: 10px; /* Space below heading */
+    color: #fff; 
+    margin-bottom: 10px; 
 }
 
 .footer-column p, .footer-column ul {
-    margin: 5px 0; /* Space between paragraphs and lists */
+    margin: 5px 0; 
 }
 
 .footer-column ul {
@@ -387,11 +401,11 @@ footer {
 .footer-column ul li a {
     color: #ccc;
     text-decoration: none;
-    transition: color 0.3s; /* Smooth transition for hover */
+    transition: color 0.3s; 
 }
 
 .footer-column ul li a:hover {
-    color: #f69046; /* Orange color on hover */
+    color: #f69046; 
 }
 
 .footer-column a {
@@ -437,9 +451,18 @@ footer {
         align-items: flex-start;
     }
 
+    .hamburger {
+        display: block; /* Show hamburger menu */
+    }
+
     nav ul {
+        display: none; /* Hide navigation links */
         flex-direction: column;
         gap: 10px;
+    }
+
+    nav ul.active {
+        display: flex; /* Show navigation links when active */
     }
 
     section.photo, section.photo .content, section.photo .profile-pic {
@@ -486,5 +509,10 @@ footer {
     footer .footer-container {
         flex-direction: column;
         text-align: center;
+    }
+
+    #map {
+        max-width: 100%;
+        height: auto; 
     }
 }

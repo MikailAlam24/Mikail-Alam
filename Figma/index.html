@@ -9,13 +9,35 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
     <title>Katharan Seoul - Digital Marketing Expert</title>
 </head>
+<script>
+    function toggleMenu() {
+        const navLinks = document.getElementById('nav-links');
+        navLinks.classList.toggle('active');
+    }
+
+    function toggleTestimonials() {
+            const testimonials = document.querySelectorAll('.testimonial.additional');
+            testimonials.forEach(testimonial => {
+                testimonial.classList.toggle('visible');
+            });
+
+            // Update button text
+            const button = document.getElementById('toggle-testimonials');
+            if (button.innerText === 'Show Less') {
+                button.innerText = 'Show More';
+            } else {
+                button.innerText = 'Show Less';
+            }
+        }
+</script>
 <body>
     <header>
         <div class="logo">
             <h1>DIGITAL</h1>
         </div>
         <nav>
-            <ul>
+            <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+            <ul id="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#work">Work</a></li>
@@ -95,12 +117,13 @@
                 </div>
             </div>
             <div class="testimonial">
+                <img src="assets/asia.png" alt="Asia Nana">
                 <div class="testimonial-content">
                     <h3>Asia Nana</h3>
                     <p class="position">MD at Asia Group</p>
                     <p>“Thank you Katharan for an amazing audit! Truly it is one of the best investment I have made!”</p>
                 </div>
-                <img src="assets/asia.png" alt="Asia Nana">
+                
             </div>
             <div class="testimonial">
                 <img src="assets/mukesh.png" alt="Mukesh Dutta">
@@ -110,9 +133,25 @@
                     <p>“Thank you Katharan for an amazing audit! Truly it is one of the best investment I have made!”</p>
                 </div>
             </div>
+            <div class="testimonial additional">
+                <img src="assets/person4.jpg" alt="Person 4">
+                <div class="testimonial-content">
+                    <h3>Person 4</h3>
+                    <p class="position">Role at Company</p>
+                    <p>“Testimonial content from person 4.”</p>
+                </div>
+            </div>
+            <div class="testimonial additional">
+                <img src="assets/person5.png" alt="Person 5">
+                <div class="testimonial-content">
+                    <h3>Person 5</h3>
+                    <p class="position">Role at Company</p>
+                    <p>“Testimonial content from person 5.”</p>
+                </div>
+            </div>
         </div>
         <div class="work-button">
-            <button onclick="location.href='#work'">Work With me</button>
+            <button id="toggle-testimonials" onclick="toggleTestimonials()">Show More</button>
         </div>
     </section>
     
@@ -123,8 +162,7 @@
             </div>
             <div class="footer-column">
                 <h3>Contact Us</h3>
-                <p>E - 402C Sector 11 Pratap Vihar<br>
-                Ghaziyabad, 201009</p>
+                <p><a href="#post1">E - 402C Sector 11 Pratap Vihar Ghaziyabad, 201009</a></p>
                 <p>8287-009-420</p>
                 <p><a href="mailto:Kumarsha480@gmail.com">Kumarsha480@gmail.com</a></p>
             </div>
@@ -144,6 +182,7 @@
                     <a href="#github"><img src="assets/Figma.png" alt="Figma"></a>
                     <a href="#reddit"><img src="assets/reddit.png" alt="Reddit"></a>
                     <a href="#discord"><img src="assets/discord.png" alt="Discord"></a>
+                    <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2475.735582299478!2d77.41122516928459!3d28.653165501721173!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cf025555cf2ab%3A0x1e308768531f72f3!2s402%2C%20Sector%2011%2C%20Sector-11%2C%20Pratap%20Vihar%2C%20Ghaziabad%2C%20Uttar%20Pradesh%20201009%2C%20India!5e0!3m2!1sen!2sus!4v1718114983174!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
         </div>
