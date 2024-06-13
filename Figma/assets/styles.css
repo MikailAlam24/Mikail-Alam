@@ -189,6 +189,8 @@ button:hover {
     list-style: none;
     padding: 0;
     display: flex;
+    display: flex;
+    flex-wrap: wrap;
     gap: 20px; /* Space between filters */
     border-bottom: 1px solid #ddd;
 }
@@ -418,6 +420,7 @@ footer {
 
 .footer-column a:hover {
     color: #f69046;
+    transition: color 0.3s;
 }
 
 .social-icons a {
@@ -520,5 +523,6 @@ footer {
     #map {
         max-width: 100%;
         height: auto; 
+        transition: color 0.3s;
     }
 }
