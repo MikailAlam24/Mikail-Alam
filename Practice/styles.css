@@ -1,0 +1,84 @@
+/* Custom styles */
+body {
+    padding-top: 0;
+    margin-top: 0;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f8f3ef;
+}
+
+.navbar {
+    background-color: #8B4513; 
+}
+
+.navbar-brand, .navbar-nav .nav-link {
+    color: #FFA500; 
+}
+
+.navbar-brand:hover, .navbar-nav .nav-link:hover {
+    color: #FF8C00; 
+}
+
+.card {
+    transition: transform 0.2s ease;
+    border: none; 
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    height: 200px;
+    object-fit: cover;
+    border-radius: 4px 4px 0 0;
+}
+
+.card-body {
+    background-color: #fffaf0;
+    border-radius: 0 0 4px 4px; 
+    border-top: 2px solid #FFA500; 
+}
+
+.card-title {
+    color: #8B4513;
+}
+
+.btn-primary {
+    background-color: #FFA500; 
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #FF8C00;
+}
+
+.accordion-button {
+    background-color: #FFA500;
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.1rem;
+}
+
+.accordion-button:not(.collapsed) {
+    color: #fff;
+    background-color: #FF8C00;
+}
+
+.accordion-body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    background-color: #fffaf0; 
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Lobster', cursive;
+    color: #8B4513;
+}
+
+p, button, input, textarea, label {
+    font-family: 'Open Sans', sans-serif;
+}
+
+#info {
+    margin-top: 40px;
+}
