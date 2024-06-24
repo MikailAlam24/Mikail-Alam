@@ -5,14 +5,27 @@ body, html {
     font-family: Arial, sans-serif;
 }
 
+header {
+    background: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
 header .logo {
     font-size: 24px;
     font-weight: bold;
+    text-align: center;
 }
 
-header nav a {
+header .nav-link {
     text-decoration: none;
     color: #000;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+header .btn {
+    padding: 8px 16px;
+    font-size: 16px;
 }
 
 .hero {
@@ -23,28 +36,38 @@ header nav a {
 
 .hero .background {
     width: 100%;
-    height: auto;
+    height: 100%;
     position: absolute;
     top: 0;
     left: 0;
     z-index: -1;
+    object-fit: cover;
 }
 
 .hero .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
     height: 100vh;
+    padding: 20px;
 }
 
 .hero .info {
     max-width: 500px;
+    text-align: left;
 }
 
 .hero .info h1 {
-    font-size: 36px;
+    font-size: 2.5rem;
+    font-weight: 700;
     margin-bottom: 20px;
+    line-height: 1.2;
 }
 
 .hero .info p {
-    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.5;
     margin-bottom: 40px;
 }
 
@@ -57,6 +80,13 @@ header nav a {
 .hero .phone {
     max-width: 350px;
     height: auto;
+    z-index: 1;
+}
+
+footer {
+    background: #f4f4f4;
+    padding: 20px 0;
+    text-align: center;
 }
 
 footer .contact p, footer .social-media a {
