@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.navbar {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 10px 20px;
+}
+
+.nav-link {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.nav-link.download {
+    background-color: #007bff;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.nav-link.download:hover {
+    background-color: #0056b3;
+}
+
+.content {
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.content p {
+    font-size: 18px;
+    line-height: 1.6;
+}

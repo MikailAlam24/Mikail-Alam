@@ -1,73 +1,189 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your App</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header class="bg-white py-3">
-        <div class="container d-flex justify-content-between align-items-center">
-            <div class="contact-info d-flex align-items-center">
-                <a href="mailto:info@youremail.com" class="mr-3">info@youremail.com</a>
-                <a href="tel:+14805550103" class="mr-3">(480) 555-0103</a>
-                <a href="#" class="mr-3"><img src="assets/facebook-fill.png" alt="Facebook" class="social-icon"></a>
-                <a href="#" class="mr-3"><img src="assets/twitter-fill.png" alt="Twitter" class="social-icon"></a>
-                <a href="#"><img src="assets/instagram-fill.png" alt="Instagram" class="social-icon"></a>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="initial-scale=1, width=device-width"/>
+    <link rel="stylesheet" href="styles.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Josefin Sans:wght@400;600;700&display=swap"/>
+  </head>
+  <body>
+    <div class="home-page-light">
+      <div class="hero-saction">
+        <img class="background-image-icon" alt="" src="assets/Background Image.png"/>
+
+        <div class="menu">
+          <div class="menu1">
+            <div class="menu-child"></div>
+            <button class="home">Home</button>
+            <a href="https://www.wikipedia.com" class="features">Features</a>
+            <div class="logo">
+              <div class="logo-child"></div>
+              <b class="logo1">Logo</b>
             </div>
+            <a href="https://www.wikipedia.com" class="about">About</a>
+            <a href="https://www.wikipedia.com" class="screenshot">Screenshot</a>
+            <a href="https://www.wikipedia.com" class="blog">Blog</a>
+            <button class="download">
+              <div class="download-child"></div>
+              <div class="download1">Download</div>
+            </button>
+          </div>
+          <button class="email">
+            <img
+              class="mailwhite" alt="mail" src="assets/mail-fill.png"/>
+            <div class="youremail">Info@youremail.com</div>
+          </button>
+          <button class="call">
+            <img class="phonewhite" alt="phone" src="assets/phone-fill.png"/>
+            <div class="div">(480) 555-0103</div>
+          </button>
+          <div class="social-icon">
+            <button class="facebookbutton">
+              <img class="facebookicon" alt="facebook" src="assets/facebook-fill.png"/>
+            </button>
+            <button class="instagrambutton">
+              <img class="instagramicon" alt="instagram" src="assets/instagram-fill.png"/>
+            </button>
+            <button class="twitterbutton">
+              <img class="twittericon" alt="twitter" src="assets/twitter-fill.png"/>
+            </button>
+            <button class="youtubebutton">
+              <img class="youtubeicon" alt="youtube" src="assets/youtube-fill.png"/>
+            </button>
+          </div>
         </div>
-        <div class="container">
-            <nav class="navbar navbar-expand-lg navbar-light">
-                <div class="navbar-collapse d-flex justify-content-center align-items-center">
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item mx-3"><a class="nav-link" href="#">Home</a></li>
-                        <li class="nav-item mx-3"><a class="nav-link" href="#">About</a></li>
-                        <li class="nav-item mx-3"><a class="nav-link" href="#">Features</a></li>
-                    </ul>
-                    <a href="#" class="navbar-brand mx-5 logo">LOGO</a>
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item mx-3"><a class="nav-link" href="#">Screenshot</a></li>
-                        <li class="nav-item mx-3"><a class="nav-link" href="#">Blog</a></li>
-                        <li class="nav-item mx-3"><a class="btn btn-primary" href="#">Download</a></li>
-                    </ul>
-                </div>
-            </nav>
+        <div class="text">
+          <div class="component-1">
+            <div class="component-1-child"></div>
+            <div class="component-1-item"></div>
+          </div>
+          <b class="a-great-app-container">
+            <p class="a-great-app">A Great App Makes</p>
+            <p class="your-life-better">Your Life Better</p>
+          </b>
+          <div class="agreatapptext">
+            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
+            sint. Velit officia consequat duis enim velit mollit. Exercitation
+            veniam consequat sunt nostrud amet.
+          </div>
+          <div class="download-app-now">Download App Now</div>
+          <div class="download-icon">
+            <button class="googlestore">
+                <img class="googlestore" alt="googlebutton" src="assets/google.png"/>
+            </button>
+            <button class="appstore">
+                <img class="appstore" alt="appstorebutton" src="assets/appstore.png"/>
+            </button>
+          </div>
         </div>
-    </header>
-    <main>
-        <section class="hero position-relative text-center text-white">
-            <img src="assets/Background Image.png" alt="Background" class="background">
-            <div class="container d-flex align-items-center justify-content-between" style="height: 100vh;">
-                <div class="info text-left">
-                    <h1 class="display-4">A GREAT APP MAKES YOUR LIFE BETTER</h1>
-                    <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
-                    <div class="store-buttons mt-4">
-                        <img src="assets/google.png" alt="Google Play" class="mr-2">
-                        <img src="assets/appstore.png" alt="App Store">
-                    </div>
-                </div>
-                <img src="assets/phone.png" alt="Phone" class="phone img-fluid">
-            </div>
-        </section>
-    </main>
-    <footer class="bg-light py-3">
-        <div class="container d-flex justify-content-between">
-            <div class="contact">
-                <p>Email: <a href="mailto:info@youremail.com">info@youremail.com</a></p>
-                <p>Phone: <a href="tel:+14805550103">(480) 555-0103</a></p>
-            </div>
-            <div class="social-media d-flex">
-                <a href="#" class="mr-3"><img src="assets/facebook-fill.png" alt="Facebook"></a>
-                <a href="#" class="mr-3"><img src="assets/twitter-fill.png" alt="Twitter"></a>
-                <a href="#"><img src="assets/instagram-fill.png" alt="Instagram"></a>
-            </div>
+        <img
+          class="free-ui-view-mobile-app-mockup" alt="phone" src="assets/phone.png"
+        />
+      </div>
+      <div class="about1">
+        <b class="about-our-app">About Our App</b>
+        <div class="apptext">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc
+          ante velit vitae. Est tellus vitae, nullam lobortis enim. Faucibus
+          amet etiam tincidunt rhoncus, ullamcorper velit. Ullamcorper risus
+          tempor, ac nunc libero urna, feugiat.
         </div>
-    </footer>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="scripts.js"></script>
-</body>
+        <div class="about-child"></div>
+        <img class="smartphonepopup" alt="smartphonepopup" src="assets/smartphonepopup.png"/>
+
+        <div class="creative-design">
+          <div class="creative-design-child"></div>
+          <img class="checkbox" alt="checkbox" src="assets/checkbox.png"/>
+          <div class="creative-design1">Creative design</div>
+          <div class="aboutdesc">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra
+            nunc ante velit vitae. Est tellus vitae, nullam lobortis enim.
+            Faucibus amet etiam tincidunt rhoncus, ullamcorper velit.
+          </div>
+        </div>
+
+        <div class="easy-to-use">
+          <div class="easy-to-use-child"></div>
+          <img class="iconsfillsystemcheckbox-cir1" alt="checkbox" src="assets/checkbox.png"/>
+          <div class="easy-to-use1">easy to use</div>
+          <div class="aboutdesc">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra
+            nunc ante velit vitae. Est tellus vitae, nullam lobortis enim.
+            Faucibus amet etiam tincidunt rhoncus, ullamcorper velit.
+          </div>
+        </div>
+
+        <div class="best-user-experince">
+          <div class="best-user-experince-child"></div>
+          <img class="iconsfillsystemcheckbox-cir2" alt="checkbox" src="assets/checkbox.png"/>
+          <div class="best-user-experince1">Best user experince</div>
+          <div class="aboutdesc">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra
+            nunc ante velit vitae. Est tellus vitae, nullam lobortis enim.
+            Faucibus amet etiam tincidunt rhoncus, ullamcorper velit.
+          </div>
+        </div>
+      </div>
+
+
+      <div class="app-features-header">
+        <img class="app-features-child" alt="background-image" src="assets/Background Image.png"/>
+
+
+        <b class="app-features">App features</b>
+        <div class="app-features-desc">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc
+          ante velit vitae. Est tellus vitae, nullam lobortis enim. Faucibus
+          amet etiam tincidunt rhoncus, ullamcorper velit. Ullamcorper risus
+          tempor, ac nunc libero urna, feugiat.
+        </div>
+        <div class="wrapper-app">
+          <img class="app-icon" alt="app" src="assets/App.png" />
+        </div>
+        <div class="chat">
+          <img class="iconscomment" alt="comment" src="assets/comment.png" />
+
+          <div class="full-free-chat">Full free chat</div>
+          <div class="fullchatdesc">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </div>
+        </div>
+        <div class="features1">
+          <img class="iconsbrowser" alt="browser" src="assets/browser.png" />
+          <div class="unlimited-features">unlimited features</div>
+          <div class="fullchatdesc">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </div>
+        </div>
+        <div class="support">
+          <img class="iconsmale-telemarketer" alt="headphone" src="assets/headphone.png"/>
+          <div class="support-by-real">24/7 support by real people</div>
+          <div class="support-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </div>
+        </div>  
+        <div class="design">
+          <img class="iconsvector" alt="vector" src="assets/vector.png" />
+          <div class="awesome-ui-design">awesome ui design</div>
+          <div class="ui-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </div>
+        </div>
+        <div class="version">
+          <img class="iconscell-phone" alt="cell phone" src="assets/cell-phone.png"/>
+          <div class="iso-androind">iso & android version</div>
+          <div class="eyescanner">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </div>
+        </div>
+        <div class="retina-ready-graphic">
+          <img class="iconseye-scanner-1" alt="eye scanner" src="assets/eye-scanner 1.png"/>
+          <div class="retina-ready-greaphics">retina ready graphics</div>
+          <div class="lorem-ipsum-dolor10">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </div>
+        </div>
+      </div>
+      
+  </body>
 </html>
