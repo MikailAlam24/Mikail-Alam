@@ -1,0 +1,46 @@
+.main-content {
+    background-image: url('assets/BackgroundImage.png');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 50px 0;
+}
+.app-content-wrapper {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    color: #4a5fd4;
+}
+.app-promo h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+.app-promo p {
+    font-size: 1rem;
+}
+.app-promo .btn-group img {
+    max-width: 150px;
+    margin: 5px;
+}
+.mobile-preview img {
+    max-width: 100%;
+}
+.navbar-center {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.navbar-brand-center {
+    display: flex;
+    align-items: center;
+}
+.navbar-floating {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background-color: rgba(248, 249, 250, 0.9);
+}
