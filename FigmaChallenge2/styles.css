@@ -397,7 +397,6 @@ body {
     border: none;
     width: 12px;
     height: 12px;
-    border-radius: 50%;
     margin: 2px;
     flex: 0 0 12px; /* Ensure the button maintains a circular shape */
 }
