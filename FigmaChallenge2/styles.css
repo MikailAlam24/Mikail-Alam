@@ -297,3 +297,337 @@ body {
 .social-icons a:hover img {
     filter: brightness(0) saturate(100%) invert(18%) sepia(79%) saturate(2267%) hue-rotate(206deg) brightness(92%) contrast(99%);
 }
+
+/* Adjust vertical spacing for feature items */
+@media (min-width: 768px) {
+    .features-row .col-md-4 {
+        min-height: 600px; /* Adjust as needed for vertical spacing */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+}
+
+.customer-slider {
+    background-image: url('assets/BackgroundImage.png');
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.customer-slider h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.customer-slider p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+
+.testimonial {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    color: #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+.testimonial h3 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.testimonial h4 {
+    font-size: 1.25rem;
+    color: #777;
+    margin-bottom: 15px;
+}
+
+.testimonial p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: black;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 40px;
+    height: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.carousel-control-prev {
+    left: -60px;
+}
+
+.carousel-control-next {
+    right: -60px;
+}
+
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 10px; /* Adjust as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.carousel-indicators button {
+    background-color: grey !important;
+    border: none;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin: 2px;
+    flex: 0 0 12px; /* Ensure the button maintains a circular shape */
+}
+
+.carousel-indicators .active {
+    background-color: grey !important;
+}
+
+@media (max-width: 767px) {
+    .carousel-control-prev,
+    .carousel-control-next {
+        top: calc(50% - 20px); /* Vertically center the arrows */
+        width: 30px;
+        height: 30px;
+    }
+
+    .carousel-control-prev {
+        left: -25px; /* Position the left arrow outside the content area */
+    }
+
+    .carousel-control-next {
+        right: -25px; /* Position the right arrow outside the content area */
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        background-color: black;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+    }
+
+    .carousel-indicators {
+        bottom: -30px; /* Adjust if necessary to move indicators up/down */
+    }
+}
+
+
+/*blog*/
+.recent-blog {
+    background-color: #f9f9f9;
+    padding: 50px 0;
+}
+
+.recent-blog h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.recent-blog p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+
+.blog-post {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-post:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.blog-post img {
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.blog-post h3 {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+}
+
+.blog-post p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.blog-post .read-more {
+    color: #4a5fd4;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.blog-post .read-more:hover {
+    color: #333;
+}
+
+
+
+
+
+
+
+
+
+
+/* Contact Section */
+.contact {
+    background-color: #f9f9f9;
+    padding: 50px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 50px;
+}
+
+.contact-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+}
+
+.contact-icon {
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+}
+
+.contact-box p {
+    font-size: 1.25rem;
+    margin: 0;
+}
+
+.divider {
+    height: 50px;
+    width: 2px;
+    background: #ccc;
+    margin: 0 20px;
+}
+
+/* Footer */
+.footer {
+    background-color: #24252a;
+    color: white;
+}
+
+.footer-logo h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.footer-logo p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.social-icons a {
+    margin: 0 10px;
+}
+
+.footer-links h4,
+.footer-newsletter h4 {
+    font-size: 1.25rem;
+    margin-bottom: 15px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links ul li a:hover {
+    color: #4a5fd4;
+}
+
+.footer-newsletter p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.footer-newsletter form {
+    display: flex;
+}
+
+.footer-newsletter input[type="email"] {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+}
+
+.footer-newsletter button {
+    padding: 10px;
+    border: none;
+    background-color: #4a5fd4;
+    color: white;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.footer-newsletter button:hover {
+    background-color: #333;
+}
+
+.footer-bottom {
+    border-top: 1px solid #4a5fd4;
+    padding-top: 10px;
+}
+
+.footer-bottom p {
+    font-size: 0.875rem;
+    margin: 0;
+}
