@@ -315,15 +315,20 @@ body {
     color: white;
 }
 
-.customer-slider h2 {
-    font-size: 2rem;
-    margin-bottom: 10px;
+swiper-container {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
-.customer-slider p {
-    font-size: 1rem;
-    line-height: 1.5;
-    margin-bottom: 30px;
+swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: auto; /* Adjust the height as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .testimonial {
@@ -332,6 +337,7 @@ body {
     border-radius: 10px;
     color: #333;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
 .testimonial img {
@@ -354,55 +360,6 @@ body {
 .testimonial p {
     font-size: 1rem;
     line-height: 1.5;
-}
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    background-color: black;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-}
-
-.carousel-control-prev,
-.carousel-control-next {
-    width: 40px;
-    height: 40px;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.carousel-control-prev {
-    left: -60px;
-}
-
-.carousel-control-next {
-    right: -60px;
-}
-
-.carousel-indicators {
-    display: flex;
-    justify-content: center;
-    position: absolute;
-    bottom: 10px; /* Adjust as needed */
-    left: 50%;
-    transform: translateX(-50%);
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.carousel-indicators button {
-    background-color: grey !important;
-    border: none;
-    width: 12px;
-    height: 12px;
-    margin: 2px;
-    flex: 0 0 12px; /* Ensure the button maintains a circular shape */
-}
-
-.carousel-indicators .active {
-    background-color: grey !important;
 }
 
 @media (max-width: 767px) {
