@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vue.js Basics</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+</head>
+<body>
+  <div id="app">
+    <h1>{{ message }}</h1>
+    <input v-model="newMessage" placeholder="Type something...">
+    <button @click="updateMessage">Change Message</button>
+
+    <p v-if="showInfo">Here's some extra info for you!</p>
+    <button @click="toggleInfo">{{ showInfo ? 'Hide Info' : 'Show Info' }}</button>
+
+    <ul>
+      <li v-for="item in items" :key="item">{{ item }}</li>
+    </ul>
+    <input v-model="newItem" placeholder="Add an item">
+    <button @click="addItem">Add Item</button>
+
+    <p>Character count: {{ charCount }}</p>
+
+    <div>
+      <button @click="likePost">Like</button>
+      <button @click="dislikePost">Dislike</button>
+      <p>{{ likes }} Likes</p>
+    </div>
+
+    <div>
+      <h2>Comments</h2>
+      <ul>
+        <li v-for="comment in comments" :key="comment">{{ comment }}</li>
+      </ul>
+      <input v-model="newComment" placeholder="Add a comment">
+      <button @click="addComment">Add Comment</button>
+      <p>{{ comments.length }} Comments</p>
+    </div>
+
+    <div>
+      <button @click="sharePost">Share</button>
+      <p>{{ shares }} Shares</p>
+    </div>
+
+    <div>
+      <button @click="toggleFollow">{{ following ? 'Unfollow' : 'Follow' }}</button>
+    </div>
+
+    <div>
+      <button @click="toggleFavorite">{{ favorite ? 'Unfavorite' : 'Favorite' }}</button>
+    </div>
+  </div>
+
+  <script>
+    var app = new Vue({
+      el: '#app',
+      data: {
+        message: 'Hello, Vue.js!',
+        newMessage: '',
+        showInfo: false,
+        items: ['Item 1', 'Item 2', 'Item 3'],
+        newItem: '',
+        likes: 0,
+        comments: [],
+        newComment: '',
+        shares: 0,
+        following: false,
+        favorite: false
+      },
+      computed: {
+        charCount: function() {
+          return this.message.length;
+        }
+      },
+      methods: {
+        updateMessage: function() {
+          this.message = this.newMessage ? this.newMessage : 'No new message!';
+        },
+        toggleInfo: function() {
+          this.showInfo = !this.showInfo;
+        },
+        addItem: function() {
+          if (this.newItem) {
+            this.items.push(this.newItem);
+            this.newItem = '';
+          }
+        },
+        likePost: function() {
+          this.likes++;
+        },
+        dislikePost: function() {
+          if (this.likes > 0) {
+            this.likes--;
+          }
+        },
+        addComment: function() {
+          if (this.newComment) {
+            this.comments.push(this.newComment);
+            this.newComment = '';
+          }
+        },
+        sharePost: function() {
+          this.shares++;
+        },
+        toggleFollow: function() {
+          this.following = !this.following;
+        },
+        toggleFavorite: function() {
+          this.favorite = !this.favorite;
+        }
+      }
+    });
+  </script>
+</body>
+</html>
