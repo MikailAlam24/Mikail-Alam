@@ -1,0 +1,17 @@
+/* text font */
+body {
+    font-family: "Verdana";
+    background-color: rgb(255, 226, 226);
+}
+
+/*gives styles to the header*/
+h2 {
+    font-style: italic;
+    font-size: 30px;
+}
+
+/*styles the scripts*/
+div {
+    margin-left: 20px;
+    padding-bottom: 10px;
+}
