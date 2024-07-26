@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue.js Properties and Functions</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+</head>
+<body>
+    <div id="app">
+        <!-- v-bind Example -->
+        <div>
+            <h2>v-bind Example</h2>
+            <a v-bind:href="url">Click here</a>
+        </div>
+
+        <!-- v-if Example -->
+        <div>
+            <h2>v-if Example</h2>
+            <p v-if="seen">You can see this because 'seen' is true.</p>
+        </div>
+
+        <!-- v-show Example -->
+        <div>
+            <h2>v-show Example</h2>
+            <p v-show="visible">You can see this because 'visible' is true.</p>
+        </div>
+
+        <!-- v-for Example -->
+        <div>
+            <h2>v-for Example</h2>
+            <ul>
+                <li v-for="item in items" :key="item">{{ item }}</li>
+            </ul>
+        </div>
+
+        <!-- Vue Events Example -->
+        <div>
+            <h2>Vue Events Example</h2>
+            <button v-on:click="sayHello">Say Hello</button>
+        </div>
+
+        <!-- v-on Example -->
+        <div>
+            <h2>v-on Example</h2>
+            <input v-on:input="updateMessage" placeholder="Type something">
+            <p>{{ message }}</p>
+        </div>
+
+        <!-- Vue Methods Example -->
+        <div>
+            <h2>Vue Methods Example</h2>
+            <button v-on:click="reverseMessage">Reverse Message</button>
+            <p>{{ message }}</p>
+        </div>
+
+        <!-- Vue Event Modifiers Example -->
+        <div>
+            <h2>Vue Event Modifiers Example</h2>
+            <form v-on:submit.prevent="submitForm">
+                <input type="text" v-model="formInput">
+                <button type="submit">Submit</button>
+            </form>
+            <p>{{ formInput }}</p>
+        </div>
+    </div>
+
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                url: 'https://www.example.com',
+                seen: true,
+                visible: true,
+                items: ['Item 1', 'Item 2', 'Item 3'],
+                message: 'Hello Vue!',
+                formInput: ''
+            },
+            methods: {
+                sayHello: function() {
+                    alert('Hello!');
+                },
+                updateMessage: function(event) {
+                    this.message = event.target.value;
+                },
+                reverseMessage: function() {
+                    this.message = this.message.split('').reverse().join('');
+                },
+                submitForm: function() {
+                    alert('Form submitted!');
+                }
+            }
+        });
+    </script>
+</body>
+</html>
