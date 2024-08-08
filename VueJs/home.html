@@ -3,94 +3,191 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vue.js Properties and Functions</title>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <title>Vue.js Sample Website with Functions</title>
+    <style>
+        .highlight {
+            background-color: yellow;
+        }
+    </style>
 </head>
 <body>
+    <!-- Initial Vue.js Application -->
     <div id="app">
-        <!-- v-bind Example -->
-        <div>
-            <h2>v-bind Example</h2>
-            <a v-bind:href="url">Click here</a>
-        </div>
-
-        <!-- v-if Example -->
-        <div>
-            <h2>v-if Example</h2>
-            <p v-if="seen">You can see this because 'seen' is true.</p>
-        </div>
-
-        <!-- v-show Example -->
-        <div>
-            <h2>v-show Example</h2>
-            <p v-show="visible">You can see this because 'visible' is true.</p>
-        </div>
-
-        <!-- v-for Example -->
-        <div>
-            <h2>v-for Example</h2>
-            <ul>
-                <li v-for="item in items" :key="item">{{ item }}</li>
-            </ul>
-        </div>
-
-        <!-- Vue Events Example -->
-        <div>
-            <h2>Vue Events Example</h2>
-            <button v-on:click="sayHello">Say Hello</button>
-        </div>
-
-        <!-- v-on Example -->
-        <div>
-            <h2>v-on Example</h2>
-            <input v-on:input="updateMessage" placeholder="Type something">
-            <p>{{ message }}</p>
-        </div>
-
-        <!-- Vue Methods Example -->
-        <div>
-            <h2>Vue Methods Example</h2>
-            <button v-on:click="reverseMessage">Reverse Message</button>
-            <p>{{ message }}</p>
-        </div>
-
-        <!-- Vue Event Modifiers Example -->
-        <div>
-            <h2>Vue Event Modifiers Example</h2>
-            <form v-on:submit.prevent="submitForm">
-                <input type="text" v-model="formInput">
-                <button type="submit">Submit</button>
-            </form>
-            <p>{{ formInput }}</p>
-        </div>
+        <!-- Text Interpolation: Displays the message defined in the Vue instance -->
+        <p>{{ message }}</p>
     </div>
 
+    <!-- Including Vue.js library via CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
     <script>
+        // Creating a new Vue instance
         new Vue({
+            // Binding the Vue instance to the root element with id 'app'
             el: '#app',
+            // Defining the data object which contains our message
             data: {
-                url: 'https://www.example.com',
-                seen: true,
-                visible: true,
-                items: ['Item 1', 'Item 2', 'Item 3'],
-                message: 'Hello Vue!',
-                formInput: ''
+                message: 'Hello, Vue.js!'
+            }
+        });
+    </script>
+
+    <!-- Root element where the Vue instance with directives and events will be mounted -->
+    <div id="app2">
+        <!-- Text Interpolation: Displays the message defined in the Vue instance -->
+        <p>{{ greetingMessage }}</p>
+
+        <!-- v-bind: Binds the 'href' attribute to the 'websiteUrl' data property -->
+        <a v-bind:href="websiteUrl">Visit Vue.js</a>
+
+        <!-- v-if: Conditionally renders this paragraph if 'paragraphVisible' is true -->
+        <p v-if="paragraphVisible">This paragraph is visible.</p>
+
+        <!-- v-else-if and v-else: Used with v-if for conditional rendering -->
+        <p v-else-if="paragraphVisible === null">Visibility is not set.</p>
+        <p v-else>This paragraph is not visible.</p>
+
+        <!-- v-show: Toggles visibility based on the 'paragraphVisible' condition -->
+        <p v-show="paragraphVisible">This paragraph is toggled with v-show.</p>
+
+        <!-- v-for: Iterates over an array to render a list -->
+        <ul>
+            <li v-for="listItem in itemList" :key="listItem">{{ listItem }}</li>
+        </ul>
+
+        <!-- v-on: Attaches event listeners to elements -->
+        <button v-on:click="toggleParagraphVisibility">Toggle Visibility</button>
+
+        <!-- v-model: Creates two-way binding with form inputs -->
+        <input v-model="userInput" placeholder="Type something">
+        <p>You typed: {{ userInput }}</p>
+
+        <!-- Event Handling Examples -->
+        <button v-on:click="showAlert">Click me</button>
+        <p v-on:mouseover="changeMessage" v-on:mouseleave="resetMessage">Hover over me to change the message</p>
+
+        <!-- Form Handling Example -->
+        <form v-on:submit.prevent="handleSubmit">
+            <input type="text" v-model="formInput" placeholder="Type and submit">
+            <button type="submit">Submit</button>
+        </form>
+        <p>Form Input: {{ formInput }}</p>
+        <input v-on:keyup="handleKeyup" placeholder="Type and see console">
+
+        <!-- Additional Vue Functions -->
+        <!-- Vue Methods -->
+        <h2>Vue Methods</h2>
+        <button v-on:click="displayMessage">Click me</button>
+        <p>{{ newMessage }}</p>
+
+        <!-- Vue Event Modifiers -->
+        <h2>Vue Event Modifiers</h2>
+        <input @keyup.enter="submitForm" placeholder="Press enter to submit">
+        <p>{{ submitMessage }}</p>
+
+        <!-- Vue Forms with v-model -->
+        <h2>Vue Forms</h2>
+        <form v-on:submit.prevent="handleFormSubmit">
+            <input v-model="formInput2" placeholder="Type and submit">
+            <button type="submit">Submit</button>
+        </form>
+        <p>Form Input: {{ formInput2 }}</p>
+
+        <!-- Vue CSS Binding -->
+        <h2>Vue CSS Binding</h2>
+        <p :class="{ highlight: isHighlighted }">Hover over me</p>
+        <button v-on:click="toggleHighlight">Toggle Highlight</button>
+
+        <!-- Vue Computed Properties -->
+        <h2>Vue Computed Properties</h2>
+        <p>Reversed Message: {{ reversedMessage }}</p>
+
+        <!-- Vue Watchers -->
+        <h2>Vue Watchers</h2>
+        <input v-model="watchInput" placeholder="Type to watch">
+        <p>{{ watchMessage }}</p>
+
+        <!-- Vue Templates -->
+        <h2>Vue Templates</h2>
+        <custom-component></custom-component>
+    </div>
+
+    <!-- Including Vue.js library via CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+    <script>
+        // Registering a global component for Vue Templates
+        Vue.component('custom-component', {
+            template: '<p>This is a custom component!</p>'
+        });
+
+        // Creating a new Vue instance with directives and event handling
+        new Vue({
+            el: '#app2',
+            data: {
+                greetingMessage: 'Hello, Vue.js!',
+                websiteUrl: 'https://vuejs.org/',
+                paragraphVisible: true,
+                itemList: ['Item 1', 'Item 2', 'Item 3'],
+                userInput: '',
+                formInput: '',
+                newMessage: '',
+                submitMessage: '',
+                formInput2: '',
+                isHighlighted: false,
+                watchInput: '',
+                watchMessage: ''
             },
             methods: {
-                sayHello: function() {
-                    alert('Hello!');
+                toggleParagraphVisibility() {
+                    this.paragraphVisible = !this.paragraphVisible;
                 },
-                updateMessage: function(event) {
-                    this.message = event.target.value;
+                showAlert() {
+                    alert('Button clicked!');
                 },
-                reverseMessage: function() {
-                    this.message = this.message.split('').reverse().join('');
+                changeMessage() {
+                    this.greetingMessage = 'Mouse hovered!';
                 },
-                submitForm: function() {
-                    alert('Form submitted!');
+                resetMessage() {
+                    this.greetingMessage = 'Hello, Vue.js!';
+                },
+                handleSubmit() {
+                    alert('Form submitted with input: ' + this.formInput);
+                },
+                handleKeyup(event) {
+                    console.log('Key pressed: ' + event.key);
+                },
+                // Vue Methods
+                displayMessage() {
+                    this.newMessage = 'Button clicked!';
+                },
+                // Vue Event Modifiers
+                submitForm() {
+                    this.submitMessage = 'Form submitted!';
+                },
+                // Vue Forms
+                handleFormSubmit() {
+                    alert('Form submitted with input: ' + this.formInput2);
+                },
+                // Vue CSS Binding
+                toggleHighlight() {
+                    this.isHighlighted = !this.isHighlighted;
+                }
+            },
+            computed: {
+                // Vue Computed Properties
+                reversedMessage() {
+                    return this.newMessage.split('').reverse().join('');
+                }
+            },
+            watch: {
+                // Vue Watchers
+                watchInput(newVal, oldVal) {
+                    this.watchMessage = `Changed from "${oldVal}" to "${newVal}"`;
                 }
             }
         });
     </script>
 </body>
 </html>
+
+<!-- PROP
+ FAKE STORE API-->

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <title>Mikail Alam</title>
+</head>
+<script>
+    function toggleMenu() {
+        const navLinks = document.getElementById('nav-links');
+        navLinks.classList.toggle('active');
+    }
+
+    function toggleTestimonials() {
+            const testimonials = document.querySelectorAll('.testimonial.additional');
+            testimonials.forEach(testimonial => {
+                testimonial.classList.toggle('visible');
+            });
+
+            // Update button text
+            const button = document.getElementById('toggle-testimonials');
+            if (button.innerText === 'Show Less') {
+                button.innerText = 'Show More';
+            } else {
+                button.innerText = 'Show Less';
+            }
+        }
+</script>
+<body>
+    <header>
+        <div class="logo">
+            <h1>DIGITAL</h1>
+        </div>
+        <nav>
+            <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+            <ul id="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#services">Service</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="photo">
+        <div class="content">
+            <h2>Are you having a good day so far?</h2>
+            <p>My name is <b>Mikail Alam.</b> I am passionate about digital marketing.</p>
+            <p>As a digital marketer, my role involves creating and implementing digital marketing strategies to help my clients achieve marketing goals.</p>
+            <button onclick="location.href='#hire'">Hire me</button>
+            <button onclick="location.href='#blog'">Read my blog</button>
+        </div>
+        <div class="profile-pic">
+            <img src="assets/mikrough1.jpg" alt="Katharan Seoul">
+        </div>
+    </section>
+    <section class="photo">
+        <div class="profile-pic">
+            <img src="assets/mikrough2.png" alt="Katharan Seoul">
+        </div>
+        <div class="content">
+            <h2>More About Me?</h2>
+            <ul>
+                <li>Developed And Executed Comprehensive Digital Marketing Strategies That Increased Website Traffic By 50% And Generated A 35% Increase In Sales.</li>
+                <li>Managed Social Media Accounts And Created Engaging Content That Resulted In A 60% Increase In Followers And A 45% Increase In Engagement.</li>
+                <li>Conducted SEO Campaigns That Improved Website Ranking And Increased Organic Traffic By 40%.</li>
+                <li>Created And Managed PPC Campaigns That Generated Leads And Increased Conversion Rates By 25%.</li>
+                <li>Developed And Managed Email Marketing Campaigns That Increased Open Rates By 30% And Click-Through Rates By 25%.</li>
+            </ul>
+            <button onclick="location.href='#blog'">Read More</button>
+        </div>
+    </section>
+    <section class="projects">
+        <h2>Project I Work On?</h2>
+        <div class="filters">
+            <ul>
+                <li><a href="#all" class="active">All</a></li>
+                <li><a href="#ui-kit">UI KIT</a></li>
+                <li><a href="#on-page-seo">On-Page SEO</a></li>
+                <li><a href="#technical-seo">Technical SEO</a></li>
+                <li><a href="#off-site-seo">Off-Site SEO</a></li>
+                <li><a href="#google-ads">Google Ads</a></li>
+            </ul>
+        </div>
+        <div class="project-list">
+            <a href="#seo-code" class="project-card">
+                <img src="assets/seo-code.png" alt="Solving Technical SEO Problems">
+                <h3>Solving Technical SEO Problems</h3>
+                <p>CODE</p>
+            </a>
+            <a href="#ui-kit" class="project-card">
+                <img src="assets/ui-kit.png" alt="Some Useful UI Kits I Working On">
+                <h3>Some Useful UI Kits I Working On</h3>
+                <p>UI/UX</p>
+            </a>
+            <a href="#optimization" class="project-card">
+                <img src="assets/optimization.png" alt="Building Plans for Optimization">
+                <h3>Building Plans for Optimization</h3>
+                <p>On-Page SEO</p>
+            </a>
+        </div>
+    </section>
+    <section class="testimonials">
+        <h2>What Clients Say About Me?</h2>
+        <div class="testimonial-list">
+            <div class="testimonial">
+                <img src="assets/aashi.png" alt="Aashi Odia">
+                <div class="testimonial-content">
+                    <h3>Aashi Odia</h3>
+                    <p class="position">Ceo at Maazo.com</p>
+                    <p>“Thank you Katharan for an amazing audit! Truly it is one of the best investment I have made!”</p>
+                </div>
+            </div>
+            <div class="testimonial">
+                <img src="assets/asia.png" alt="Asia Nana">
+                <div class="testimonial-content">
+                    <h3>Asia Nana</h3>
+                    <p class="position">MD at Asia Group</p>
+                    <p>“Thank you Katharan for an amazing audit! Truly it is one of the best investment I have made!”</p>
+                </div>
+                
+            </div>
+            <div class="testimonial">
+                <img src="assets/mukesh.png" alt="Mukesh Dutta">
+                <div class="testimonial-content">
+                    <h3>Mukesh Dutta</h3>
+                    <p class="position">Partner with ielo</p>
+                    <p>“Thank you Katharan for an amazing audit! Truly it is one of the best investment I have made!”</p>
+                </div>
+            </div>
+            <div class="testimonial additional">
+                <img src="assets/person4.jpg" alt="Person 4">
+                <div class="testimonial-content">
+                    <h3>Person 4</h3>
+                    <p class="position">Role at Company</p>
+                    <p>“Testimonial content from person 4.”</p>
+                </div>
+            </div>
+            <div class="testimonial additional">
+                <img src="assets/person5.png" alt="Person 5">
+                <div class="testimonial-content">
+                    <h3>Person 5</h3>
+                    <p class="position">Role at Company</p>
+                    <p>“Testimonial content from person 5.”</p>
+                </div>
+            </div>
+        </div>
+        <div class="work-button">
+            <button id="toggle-testimonials" onclick="toggleTestimonials()">Show More</button>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h1 class="footer-title">MIKAILALAM.</h1>
+            </div>
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <p><a href="#post1">3023 W Steepbank Cir</a></p>
+                <p>346-626-0018</p>
+                <p><a href="mailto:Kumarsha480@gmail.com">mikail.alam81@gmail.com</a></p>
+            </div>
+            <div class="footer-column">
+                <h3>Recent Post</h3>
+                <ul>
+                    <li><a href="#post1">Top 10 tips to learn digital marketing.</a></li>
+                    <li><a href="#post2">My journey at digitalsahil</a></li>
+                    <li><a href="#post3">How to stay productive</a></li>
+                    <li><a href="#post4">How to make money from home</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Social</h3>
+                <div class="social-icons">
+                    <a href="#linkedin"><img src="assets/linkedin.png" alt="LinkedIn"></a>
+                    <a href="#github"><img src="assets/Figma.png" alt="Figma"></a>
+                    <a href="#reddit"><img src="assets/reddit.png" alt="Reddit"></a>
+                    <a href="#discord"><img src="assets/discord.png" alt="Discord"></a>
+                    <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2475.735582299478!2d77.41122516928459!3d28.653165501721173!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cf025555cf2ab%3A0x1e308768531f72f3!2s402%2C%20Sector%2011%2C%20Sector-11%2C%20Pratap%20Vihar%2C%20Ghaziabad%2C%20Uttar%20Pradesh%20201009%2C%20India!5e0!3m2!1sen!2sus!4v1718114983174!5m2!1sen!2sus" width="100%" height="20%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Copyright © 2024 All rights reserved</p>
+        </div>
+    </footer>
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('nav-links');
+            navLinks.classList.toggle('active');
+        }
+        
+        // Vue component for testimonials
+        Vue.component('testimonial-item', {
+            props: ['testimonial'],
+            template: `
+                <transition name="fade">
+                    <div class="testimonial" v-if="testimonial.visible">
+                        <img :src="testimonial.img" :alt="testimonial.name">
+                        <div class="testimonial-content">
+                            <h3>{{ testimonial.name }}</h3>
+                            <p class="position">{{ testimonial.position }}</p>
+                            <p>{{ testimonial.content }}</p>
+                        </div>
+                    </div>
+                </transition>
+            `
+        });
+
+        // Vue instance
+        new Vue({
+            el: 'body',
+            data: {
+                testimonials: [
+                    {img: 'assets/aashi.png', name: 'Aashi Odia', position: 'Ceo at Maazo.com', content: '“Thank you Katharan for an amazing audit! Truly it is one of the best investment I have made!”', visible: true},
+                    {img: 'assets/asia.png', name: 'Asia Nana', position: 'MD at Asia Group', content: '“Thank you Katharan for an amazing audit! Truly it is one of the best investment I have made!”', visible: true},
+                    {img: 'assets/mukesh.png', name: 'Mukesh Dutta', position: 'Partner with ielo', content: '“Thank you Katharan for an amazing audit! Truly it is one of the best investment I have made!”', visible: true},
+                    {img: 'assets/person4.jpg', name: 'Person 4', position: 'Role at Company', content: '“Testimonial content from person 4.”', visible: false},
+                    {img: 'assets/person5.png', name: 'Person 5', position: 'Role at Company', content: '“Testimonial content from person 5.”', visible: false},
+                ],
+                showMore: false
+            },
+            methods: {
+                toggleTestimonials() {
+                    this.showMore = !this.showMore;
+                    this.testimonials.forEach((testimonial, index) => {
+                        if (index >= 3) {
+                            testimonial.visible = this.showMore;
+                        }
+                    });
+                }
+            }
+        });
+    </script>
+    
+</body>
+</html>
