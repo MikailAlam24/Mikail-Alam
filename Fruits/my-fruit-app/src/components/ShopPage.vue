@@ -11,7 +11,6 @@
           >
             All
           </a>
-          <!-- v-for loop for fruits -->
           <a 
             href="#" 
             class="list-group-item list-group-item-action" 
@@ -49,8 +48,7 @@
           <div 
             class="col-md-4 mb-4" 
             v-for="fruit in sortedFruits" 
-            :key="fruit.name"
-          >
+            :key="fruit.name">
             <div class="card h-100">
               <img :src="fruit.image" class="card-img-top" alt="Fruit image">
               <div class="card-body">
@@ -75,14 +73,16 @@ export default {
       let fruits = this.filteredFruits;
 
       switch (this.sortOption) {
+        //price sort
         case 'priceDesc':
           return fruits.sort((a, b) => b.price - a.price);
+          //name sort
         case 'nameAsc':
           return fruits.sort((a, b) => a.name.localeCompare(b.name));
         case 'nameDesc':
           return fruits.sort((a, b) => b.name.localeCompare(a.name));
         default:
-          // Default sorting by color
+          // color sort
           return fruits.sort((a, b) => this.$root.colorOrder.indexOf(a.color) - this.$root.colorOrder.indexOf(b.color));
       }
     },
@@ -101,13 +101,15 @@ export default {
     }
   },
   methods: {
-    filterFruits(category) {
-      this.$emit('filterFruits', category);
-    }
+  filterFruits(category) {
+    this.$emit('update:searchQuery', '');
+    this.$emit('filterFruits', category);  
   }
+}
+
 };
 </script>
 
 <style scoped>
-/* Add any specific styles for the shop section here */
+
 </style>

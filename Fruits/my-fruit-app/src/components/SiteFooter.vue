@@ -83,12 +83,12 @@ footer p, footer li {
 }
 
 footer a {
-    color: #ffc107; /* Yellow color for links */
+    color: #ffc107; 
     text-decoration: none;
 }
 
 footer a:hover {
-    color: #ffffff; /* White color on hover */
+    color: #ffffff; 
 }
 
   </style>

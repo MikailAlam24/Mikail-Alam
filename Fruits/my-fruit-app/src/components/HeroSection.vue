@@ -106,7 +106,7 @@ export default {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(255, 255, 255, 0.85); /* White background with 15% opacity */
+    background: rgba(255, 255, 255, 0.85);
     z-index: 1;
 }
 
@@ -166,14 +166,14 @@ export default {
         border-radius: 5px;
         margin-bottom: 5px;
         width: 100%;
-        height: 50px; /* Increased height */
-        font-size: 1rem; /* Increased font size */
+        height: 50px; 
+        font-size: 1rem; 
     }
     .input-group .btn {
         border-radius: 5px;
         width: 100%;
-        height: 50px; /* Increased height */
-        font-size: 1rem; /* Increased font size */
+        height: 50px; 
+        font-size: 1rem;
     }
 }
 .carousel-item {

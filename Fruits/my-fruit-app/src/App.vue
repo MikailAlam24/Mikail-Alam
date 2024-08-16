@@ -2,7 +2,7 @@
   <div id="app">
     <SiteHeader :currentPage="currentPage" @changePage="changePage" />
     <HeroSection v-if="currentPage === 'home'" :fruits="fruits" @search="searchFruits" />
-    <ShopPage v-if="currentPage === 'shop'" :fruits="fruits" :searchQuery="searchQuery" :sortOption="sortOption" :selectedCategory="selectedCategory" @filterFruits="filterFruits" />
+    <ShopPage v-if="currentPage === 'shop'" :fruits="fruits" :searchQuery="searchQuery" :sortOption="sortOption" :selectedCategory="selectedCategory" @filterFruits="filterFruits" @update:searchQuery="searchQuery = $event"/>
     <SiteFooter />
   </div>
 </template>
